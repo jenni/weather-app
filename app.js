@@ -18,7 +18,7 @@ const argv = yargs
 const address = encodeURIComponent(argv.address)
 
 request({
-  url: `https://maps.googleapis.com/maps/api/geocode/json?address=${address}`,
+  url: `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyCg9x6K4-sf44jIWZV4xrNsViADbOPX_tA`,
   json: true
 }, (error, response, body) => {
   console.log(`Address: ${body.results[0].formatted_address}`)
