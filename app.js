@@ -17,12 +17,10 @@ const argv = yargs
   .argv
 
 geocode.geocodeAddress(argv.address, (err, res) => {
-  if (err) {
-    console.log(err)
-  } else {
-    darksky.getWeather(res.latitude, res.longitude, (err, weatherRes) => {
-      if (err) console.log(err)
-      console.log(JSON.stringify(weatherRes, undefined, 2))
-    })
-  }
+  if (err) console.log(err)
+
+  darksky.getWeather(res.latitude, res.longitude, (err, weatherRes) => {
+    if (err) console.log(err)
+    console.log(`It's currently ${weatherRes.temperature} in ${res.address}. It feels like ${weatherRes.apparentTemperature}.`)
+  })
 })
