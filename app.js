@@ -19,3 +19,4 @@ geocode.geocodeAddress(argv.address, (err, res) => {
   if (err) console.log(err)
   console.log(JSON.stringify(res, undefined, 2))
 })
+
