@@ -16,7 +16,7 @@ This repository shows three different ways of requesting data from **Dark Sky AP
 
 * **Promise wrappers** : **`app-request-promise.js`** : uses the `request` HTTP request client, non-compatible Promise library. `requests` have been wrapped in custom Promise declarations to use `promise chaining` or `async/await` : **`-> node app-request-promise.js --a berlin`** .
  
-**Calls via Promised based library** : **`app-axios-promise.js`** : requires `axios`, a Promise based HTTP client for node. The simplest and quickest way of requesting async data : **`-> node app-axios-promise.js --address lalala`**
+* **Calls via Promised based library** : **`app-axios-promise.js`** : requires `axios`, a Promise based HTTP client for node. The simplest and quickest way of requesting async data : **`-> node app-axios-promise.js --address lalala`**
 
 **CLI help:**
 
